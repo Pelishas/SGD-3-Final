@@ -1,0 +1,249 @@
+/* src/styles/App.css */
+
+/* --- General Layout --- */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+.container {
+    padding: 20px;
+}
+
+/* --- Header --- */
+.main-header {
+    background-color: #5d9cec; /* Light blue */
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.logout-btn {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left: 15px;
+}
+
+.welcome-msg {
+    margin-right: 20px;
+    font-size: 0.9em;
+}
+
+/* --- Auth Forms (Login/Register) --- */
+.auth-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.auth-container input, .auth-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.auth-container button {
+    width: 100%;
+    background-color: #5d9cec;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+/* --- Dashboard Grid --- */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.grid-item {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+/* --- Chat Window --- */
+.chat-window {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.message-list {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 10px;
+    background-color: #fafafa;
+}
+
+.message {
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+.self {
+    align-self: flex-end;
+    background-color: #d1e7fd;
+    margin-left: auto;
+}
+
+.other {
+    align-self: flex-start;
+    background-color: #e9e9eb;
+    margin-right: auto;
+}
+
+.message-input-form {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+}
+
+.message-input-form input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+
+.message-input-form button {
+    padding: 10px 15px;
+    background-color: #5d9cec;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}/* --- Home Page Specific Styles (Add to App.css) --- */
+
+.home-page {
+    text-align: center;
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: #e0f2f1; /* Light mint/teal background */
+    padding: 80px 20px;
+    border-radius: 12px;
+    margin-bottom: 40px;
+}
+
+.hero-section h1 {
+    font-size: 3em;
+    color: #00796b; /* Dark teal */
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.3em;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.cta-buttons a {
+    text-decoration: none;
+    padding: 15px 30px;
+    margin: 0 10px;
+    border-radius: 30px;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.primary-btn {
+    background-color: #4db6ac; /* Primary button color */
+    color: white;
+    border: 2px solid #4db6ac;
+}
+
+.primary-btn:hover {
+    background-color: #00796b;
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: #4db6ac;
+    border: 2px solid #4db6ac;
+}
+
+.secondary-btn:hover {
+    background-color: #4db6ac;
+    color: white;
+}
+
+.large {
+    font-size: 1.3em;
+    padding: 18px 40px;
+}
+
+/* Features Section */
+.features-section h2 {
+    color: #5d9cec;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 0 20px;
+}
+
+.feature-card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    text-align: left;
+    transition: transform 0.2s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card h3 {
+    color: #333;
+    font-size: 1.4em;
+    margin-top: 0;
+}
+
+.call-to-action-bottom {
+    padding: 40px 20px;
+}
